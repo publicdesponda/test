@@ -12,7 +12,6 @@ jobs:
       - name: Checkout base repo
         uses: actions/checkout@v4
         with:
-          ref: main
           fetch-depth: 1
 
       - name: Run possibly action
