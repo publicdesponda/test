@@ -12,8 +12,10 @@ jobs:
       - name: Checkout base repo
         uses: actions/checkout@v4
         with:
-          ref: main
-          fetch-depth: 1
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
 
       - name: Run possibly action
         uses: ./.github/actions/install-dda

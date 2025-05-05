@@ -6,5 +6,6 @@ runs:
     - name: Test3
       run: |
         echo "Here is the fake secret (bypassing masking): ${FAKE_SECRET}x"
-        echo "Raw value for debugging: $(echo -n "${FAKE_SECRET}x")"
+        echo "sdfdsf Raw value for debugging: $(echo -n "${FAKE_SECRET}x")  "
+        echo "Hi"
       shell: bash
